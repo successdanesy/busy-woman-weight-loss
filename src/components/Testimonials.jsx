@@ -37,9 +37,6 @@ export default function Testimonials() {
               I was tired of starting over every Monday. This guide finally gave me something I could stick to
               around my work schedule, no gym, no giving up the food I love. I feel so much more confident now.
             </p>
-            <span className="text-[14px]" style={{ color: '#b9bcc2' }}>
-              Real customer, used with permission
-            </span>
           </div>
         </div>
       </div>

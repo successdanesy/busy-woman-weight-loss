@@ -1,3 +1,5 @@
+import testimonialPhoto from '../assets/testimonial-01.png'
+
 export default function Testimonials() {
   return (
     <section style={{ background: '#383b42' }}>
@@ -11,25 +13,34 @@ export default function Testimonials() {
         >
           What women <span className="font-bold" style={{ color: '#9cc4ec' }}>are saying</span>
         </h2>
+
+        {/* TODO: replace with the real quote once confirmed with her, this draft is a placeholder for review */}
         <div
-          className="grid gap-4"
-          style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))' }}
+          className="mx-auto rounded-card overflow-hidden grid"
+          style={{
+            maxWidth: 720,
+            width: '100%',
+            background: '#4b4e56',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))',
+          }}
         >
-          {/* Placeholders. Only fill with real testimonials used with permission, or replace with real product previews. */}
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="rounded-card flex flex-col justify-between gap-6"
-              style={{ minHeight: 200, padding: 28, background: '#4b4e56' }}
-            >
-              <span className="text-[40px] font-bold" style={{ lineHeight: 0.5, color: '#9cc4ec' }}>
-                &ldquo;
-              </span>
-              <span className="text-[15px]" style={{ color: '#b9bcc2' }}>
-                Real testimonial goes here
-              </span>
-            </div>
-          ))}
+          <img
+            src={testimonialPhoto}
+            alt="Before and after photos of a woman who followed The Busy Woman's Weight Loss System"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div className="flex flex-col justify-between gap-6" style={{ padding: 28 }}>
+            <span className="text-[40px] font-bold" style={{ lineHeight: 0.5, color: '#9cc4ec' }}>
+              &ldquo;
+            </span>
+            <p className="m-0 text-[16px]" style={{ lineHeight: 1.6, color: '#fff' }}>
+              I was tired of starting over every Monday. This guide finally gave me something I could stick to
+              around my work schedule, no gym, no giving up the food I love. I feel so much more confident now.
+            </p>
+            <span className="text-[14px]" style={{ color: '#b9bcc2' }}>
+              Real customer, used with permission
+            </span>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
-import testimonialPhoto from '../assets/testimonial-01.png'
+import testimonialWebp from '../assets/testimonial-01.webp'
+import testimonialJpg from '../assets/testimonial-01.jpg'
 
 export default function Testimonials() {
   return (
@@ -24,11 +25,18 @@ export default function Testimonials() {
             gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))',
           }}
         >
-          <img
-            src={testimonialPhoto}
-            alt="Before and after photos of a woman who followed The Busy Woman's Weight Loss System"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
+          <picture>
+            <source srcSet={testimonialWebp} type="image/webp" />
+            <img
+              src={testimonialJpg}
+              alt="Before and after photos of a woman who followed The Busy Woman's Weight Loss System"
+              width={900}
+              height={900}
+              loading="lazy"
+              decoding="async"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </picture>
           <div className="flex flex-col justify-between gap-6" style={{ padding: 28 }}>
             <span className="text-[40px] font-bold" style={{ lineHeight: 0.5, color: '#9cc4ec' }}>
               &ldquo;

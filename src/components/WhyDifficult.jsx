@@ -39,8 +39,15 @@ export default function WhyDifficult() {
           style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,340px),1fr))' }}
         >
           {ITEMS.map((item) => (
-            <div key={item.n} className="flex flex-col gap-2.5">
-              <span className="text-[14px] font-bold" style={{ color: '#4d7aa6' }}>
+            <div
+              key={item.n}
+              className="flex flex-col gap-2.5 rounded-card border border-border1"
+              style={{ padding: 24, background: '#fff' }}
+            >
+              <span
+                className="inline-flex items-center justify-center text-[13px] font-bold rounded-full"
+                style={{ width: 30, height: 30, background: '#e3eefa', color: '#4d7aa6' }}
+              >
                 {item.n}
               </span>
               <h3 className="m-0 text-[19px] font-bold" style={{ lineHeight: 1.3 }}>

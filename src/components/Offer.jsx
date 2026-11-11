@@ -81,7 +81,7 @@ export default function Offer() {
           </span>
           <a
             href="https://nestuge.com/busywomanweightloss"
-            className="mt-1.5 flex justify-center text-[16px] font-bold rounded-btn"
+            className="mt-1.5 flex justify-center text-[16px] font-bold rounded-full"
             style={{ padding: '18px 32px', background: '#9cc4ec', color: '#1f2126' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#9cc4ec')}

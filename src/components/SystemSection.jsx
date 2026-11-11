@@ -40,10 +40,14 @@ export default function SystemSection() {
         style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,270px),1fr))' }}
       >
         {ITEMS.map((item, i) => (
-          <div key={item.title} className="flex gap-4 items-start">
+          <div
+            key={item.title}
+            className="flex gap-4 items-start rounded-card"
+            style={{ padding: 20, background: '#f4f8fc' }}
+          >
             <span
-              className="flex-none w-[38px] h-[38px] rounded-tile flex items-center justify-center text-[14px] font-bold"
-              style={{ background: '#e3eefa', color: '#2f3136' }}
+              className="flex-none w-[38px] h-[38px] rounded-full flex items-center justify-center text-[14px] font-bold"
+              style={{ background: '#9cc4ec', color: '#1f2126' }}
             >
               {i + 1}
             </span>

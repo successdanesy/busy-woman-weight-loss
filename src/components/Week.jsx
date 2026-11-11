@@ -39,7 +39,10 @@ export default function Week() {
         </p>
       </div>
 
-      <div className="flex flex-col min-w-0" style={{ flex: '1.4 1 340px' }}>
+      <div
+        className="flex flex-col min-w-0 rounded-panel border border-border1"
+        style={{ flex: '1.4 1 340px', padding: '4px 24px', background: '#fff' }}
+      >
         {ROWS.map((row) => (
           <div
             key={row.label}

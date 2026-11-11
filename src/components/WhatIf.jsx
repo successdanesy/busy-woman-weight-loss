@@ -71,7 +71,7 @@ export default function WhatIf() {
           </p>
           <a
             href="https://nestuge.com/busywomanweightloss"
-            className="whitespace-nowrap text-[15px] font-semibold rounded-btn"
+            className="whitespace-nowrap text-[15px] font-semibold rounded-full"
             style={{ padding: '16px 30px', background: '#9cc4ec', color: '#1f2126' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#9cc4ec')}

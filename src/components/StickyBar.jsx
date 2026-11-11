@@ -31,7 +31,7 @@ export default function StickyBar({ enabled = true }) {
       </span>
       <a
         href="https://nestuge.com/busywomanweightloss"
-        className="whitespace-nowrap text-[14px] font-bold rounded-btn"
+        className="whitespace-nowrap text-[14px] font-bold rounded-full"
         style={{ padding: '11px 20px', background: '#fff', color: '#2f3136' }}
       >
         Get access

@@ -46,7 +46,7 @@ export default function Header() {
 
           <a
             href="https://nestuge.com/busywomanweightloss"
-            className="hidden min-[900px]:inline-block whitespace-nowrap text-[14px] font-semibold rounded-btn"
+            className="hidden min-[900px]:inline-block whitespace-nowrap text-[14px] font-semibold rounded-full"
             style={{ padding: '12px 22px', background: '#9cc4ec', color: '#1f2126' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#9cc4ec')}
@@ -86,7 +86,7 @@ export default function Header() {
             <a
               href="https://nestuge.com/busywomanweightloss"
               onClick={closeMenu}
-              className="mt-3 text-center text-[16px] font-semibold rounded-btn"
+              className="mt-3 text-center text-[16px] font-semibold rounded-full"
               style={{ padding: 16, background: '#9cc4ec', color: '#1f2126' }}
             >
               Get the system · ₦15,000

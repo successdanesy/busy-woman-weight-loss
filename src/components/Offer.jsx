@@ -79,9 +79,8 @@ export default function Offer() {
           <span className="text-[15px]" style={{ color: '#8a8d93' }}>
             Reference price <span style={{ textDecoration: 'line-through' }}>₦30,000 / $30</span>
           </span>
-          {/* href is "#" placeholder; wire to the real checkout/payment link before launch. */}
           <a
-            href="#"
+            href="https://nestuge.com/busywomanweightloss"
             className="mt-1.5 flex justify-center text-[16px] font-bold rounded-btn"
             style={{ padding: '18px 32px', background: '#9cc4ec', color: '#1f2126' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}

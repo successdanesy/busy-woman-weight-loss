@@ -30,7 +30,7 @@ export default function StickyBar({ enabled = true }) {
         <span style={{ color: '#a3a6ab', fontWeight: 400, textDecoration: 'line-through' }}>₦30,000</span>
       </span>
       <a
-        href="#buy"
+        href="https://nestuge.com/busywomanweightloss"
         className="whitespace-nowrap text-[14px] font-bold rounded-btn"
         style={{ padding: '11px 20px', background: '#fff', color: '#2f3136' }}
       >

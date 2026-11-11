@@ -45,7 +45,7 @@ export default function Header() {
           </div>
 
           <a
-            href="#buy"
+            href="https://nestuge.com/busywomanweightloss"
             className="hidden min-[900px]:inline-block whitespace-nowrap text-[14px] font-semibold rounded-btn"
             style={{ padding: '12px 22px', background: '#9cc4ec', color: '#1f2126' }}
             onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
@@ -84,7 +84,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#buy"
+              href="https://nestuge.com/busywomanweightloss"
               onClick={closeMenu}
               className="mt-3 text-center text-[16px] font-semibold rounded-btn"
               style={{ padding: 16, background: '#9cc4ec', color: '#1f2126' }}

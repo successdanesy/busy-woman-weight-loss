@@ -62,13 +62,6 @@ export default function WhoItsFor() {
           </ul>
         </div>
       </div>
-
-      <p
-        className="m-0 text-center text-[17px] font-semibold border-t border-border1"
-        style={{ paddingTop: 28 }}
-      >
-        Realistic habits and sustainable progress, not promises of instant results.
-      </p>
     </section>
   )
 }

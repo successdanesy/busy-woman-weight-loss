@@ -2,22 +2,22 @@ const ITEMS = [
   {
     n: '01',
     title: 'Routines that don’t fit your schedule',
-    body: 'A two-hour gym routine sounds good until meetings run late, the children need attention or you get home exhausted.',
+    body: 'A two-hour gym routine falls apart the moment meetings run late or the children need you.',
   },
   {
     n: '02',
     title: 'Treating your favourite foods like the enemy',
-    body: 'Rice, yam, plantain, potatoes, pasta, swallow. Healthier eating doesn’t mean abandoning your culture or the meals you grew up on.',
+    body: 'Healthier eating doesn’t mean giving up the meals you grew up on.',
   },
   {
     n: '03',
     title: 'Relying on motivation, not a routine',
-    body: 'Motivation won’t always be there after a stressful day. You need small habits you can return to when life gets busy.',
+    body: 'Motivation fades after a stressful day. You need habits you can return to.',
   },
   {
     n: '04',
     title: 'One difficult day feels like failure',
-    body: 'One meal doesn’t erase your progress. The goal is to keep going instead of constantly starting over.',
+    body: 'One meal doesn’t erase your progress. Keep going instead of starting over.',
   },
 ]
 

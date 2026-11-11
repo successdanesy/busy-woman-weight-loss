@@ -13,12 +13,11 @@ export default function NotDiscipline() {
           textWrap: 'balance',
         }}
       >
-        It&rsquo;s not always that you lack discipline.{' '}
-        <span className="font-bold">The advice you&rsquo;ve been following was never designed for your lifestyle.</span>
+        It&rsquo;s not always discipline. <span className="font-bold">The advice you&rsquo;ve been following was never designed for your lifestyle.</span>
       </p>
       <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5f6268', maxWidth: 560 }}>
-        Most plans expect hours to cook, daily gym time and energy for complicated meals. You&rsquo;re a working
-        woman with responsibilities. You need something that works even when your schedule doesn&rsquo;t.
+        Most plans expect hours to cook and daily gym time. You need something that works even when your
+        schedule doesn&rsquo;t.
       </p>
     </section>
   )

@@ -61,7 +61,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap justify-center items-center gap-[22px] mt-1.5">
           <a
-            href="#buy"
+            href="https://nestuge.com/busywomanweightloss"
             className="whitespace-nowrap text-[16px] font-semibold rounded-btn"
             style={{
               padding: '17px 32px',

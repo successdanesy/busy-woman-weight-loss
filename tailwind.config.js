@@ -1,0 +1,52 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Nunito', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        page: '#fafaf9',
+        ink: '#23252a',
+        'ink-bold': '#2f3136',
+        darkest: '#1f2126',
+        muted: '#5f6268',
+        faint: '#8a8d93',
+        'list-muted': '#6c6f75',
+        border1: '#e8eaec',
+        border2: '#ebedef',
+        ring: '#c3c6cb',
+        blue: '#9cc4ec',
+        'blue-hover': '#87b5e3',
+        'blue-mid': '#4d7aa6',
+        'blue-deep': '#2c5680',
+        'blue-pale-1': '#cfe2f5',
+        'blue-pale-2': '#e3eefa',
+        'blue-pale-3': '#e9f0f8',
+        'blue-pale-4': '#f4f8fc',
+        'blue-pale-5': '#a9c9ea',
+        panel: '#23252a',
+        'sticky-bg': '#2a2c31',
+        'dark-divider': '#3a3d44',
+        'on-dark-1': '#b9bcc2',
+        'on-dark-2': '#d7d9dd',
+        'on-dark-3': '#a3a6ab',
+      },
+      boxShadow: {
+        cta: '0 14px 30px -14px rgba(60,100,150,.35)',
+        video: '0 40px 80px -50px rgba(40,70,110,.3)',
+        'video-btn': '0 10px 30px -10px rgba(40,70,110,.3)',
+        offer: '0 40px 80px -60px rgba(40,70,110,.35)',
+        sticky: '0 14px 34px -12px rgba(20,24,32,.45)',
+      },
+      borderRadius: {
+        panel: '14px',
+        card: '12px',
+        btn: '10px',
+        tile: '8px',
+      },
+    },
+  },
+  plugins: [],
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-padding-top:90px;scroll-behavior:smooth}
+body{margin:0;background:#fafaf9;color:#23252a;font-family:'Nunito',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#2f3136;text-decoration:none}a:hover{color:#4d7aa6}
+details summary::-webkit-details-marker{display:none}
+details[open] .pm{transform:rotate(45deg)}
+@keyframes bwtread{to{stroke-dashoffset:36}}
+@keyframes bwbelt{to{background-position:-.18em 0}}
+[data-nav=mobile]{display:none!important}
+@media (max-width:599px){body{zoom:.9}[data-bw-weight]{font-size:1.15em!important;letter-spacing:-0.02em!important}[data-bw-h1]{line-height:1.14!important;letter-spacing:-0.015em!important;font-size:40px!important}}
+@media (max-width:899px){[data-nav=desktop]{display:none!important}[data-nav=mobile]{display:flex!important}}
+</style>
+</helmet>
+
+<div style="height:80px"></div>
+<nav style="position:fixed;top:0;left:0;right:0;z-index:20;background:#fafaf9;border-bottom:1px solid #e8eaec">
+  <div style="max-width:1160px;margin:0 auto;padding:18px clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="#" aria-label="The Busy Woman’s Weight Loss System, home" style="display:flex;align-items:center;gap:10px;color:#23252a">
+      <span style="display:flex;gap:5px;align-items:flex-end;height:30px;padding-left:5px"><span style="width:11px;height:18px;border-radius:6px;background:#cfe2f5;transform:skewX(-16deg)"></span><span style="width:11px;height:30px;border-radius:6px;background:#4d7aa6;transform:skewX(-16deg)"></span><span style="width:11px;height:30px;border-radius:6px;background:#2f3136;transform:skewX(-16deg)"></span></span>
+      
+    </a>
+    <div data-nav="desktop" style="display:flex;gap:34px;font-size:15px;font-weight:500;white-space:nowrap">
+      <a href="#week" style="color:#5f6268" style-hover="color:#23252a">Sound familiar?</a>
+      <a href="#system" style="color:#5f6268" style-hover="color:#23252a">The system</a>
+      <a href="#buy" style="color:#5f6268" style-hover="color:#23252a">What’s inside</a>
+      <a href="#faq" style="color:#5f6268" style-hover="color:#23252a">FAQ</a>
+    </div>
+    <a data-nav="desktop" href="#buy" style="padding:12px 22px;border-radius:10px;background:#9cc4ec;color:#1f2126;font-size:14px;font-weight:600;white-space:nowrap" style-hover="background:#87b5e3;color:#1f2126">Get the system</a>
+    <button data-nav="mobile" onClick="{{ toggleMenu }}" aria-label="Menu" style="height:44px;padding:0 16px 0 14px;border-radius:10px;border:none;background:#23252a;color:#fff;align-items:center;gap:10px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600">
+      <span style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="width:18px;height:2px;border-radius:2px;background:#9cc4ec"></span><span style="width:12px;height:2px;border-radius:2px;background:#fff"></span><span style="width:15px;height:2px;border-radius:2px;background:#fff"></span></span>
+      <span>{{ menuLabel }}</span>
+    </button>
+  </div>
+  <sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
+    <div data-nav="mobile" style="padding:0 20px 20px;flex-direction:column">
+      <a href="#week" onClick="{{ closeMenu }}" style="padding:15px 4px;font-size:18px;color:#23252a;border-bottom:1px solid #ebedef">Sound familiar?</a>
+      <a href="#system" onClick="{{ closeMenu }}" style="padding:15px 4px;font-size:18px;color:#23252a;border-bottom:1px solid #ebedef">The system</a>
+      <a href="#buy" onClick="{{ closeMenu }}" style="padding:15px 4px;font-size:18px;color:#23252a;border-bottom:1px solid #ebedef">What’s inside</a>
+      <a href="#faq" onClick="{{ closeMenu }}" style="padding:15px 4px;font-size:18px;color:#23252a">FAQ</a>
+      <a href="#buy" onClick="{{ closeMenu }}" style="margin-top:12px;padding:16px;text-align:center;border-radius:10px;background:#9cc4ec;color:#1f2126;font-size:16px;font-weight:600" style-hover="color:#fff">Get the system · ₦15,000</a>
+    </div>
+  </sc-if>
+</nav>
+
+<!-- HERO -->
+<header data-screen-label="Hero" style="position:relative;overflow:hidden">
+  <div style="position:relative;max-width:900px;margin:0 auto;padding:clamp(56px,9vw,112px) 20px clamp(40px,6vw,64px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#2c5680">The Busy Woman’s Weight Loss System</span>
+    <h1 data-bw-h1="" style="margin:0;font-size:clamp(42px,7vw,84px);line-height:1.02;letter-spacing:-0.035em;font-weight:300;text-wrap:balance">Lose <span data-bw-weight="" style="font-size:1.1em;font-weight:800;letter-spacing:-0.045em">weight</span> without living in the <span style="position:relative;display:inline-block;isolation:isolate;white-space:nowrap;padding:0 .04em .3em;margin-right:.85em">gym.<svg data-bw-tm="" aria-hidden="true" viewBox="0 0 600 300" style="position:absolute;left:-.12em;bottom:-.1em;width:2.9em;height:1.45em;z-index:-1;overflow:visible">
+<ellipse cx="310" cy="290" rx="292" ry="9" fill="rgba(35,37,42,.13)"></ellipse>
+<!-- back upright (far side) -->
+<path d="M560 214 L590 92" stroke="#1f2126" stroke-width="13" stroke-linecap="round"></path>
+<path d="M586 108 Q572 120 516 112" stroke="#1f2126" stroke-width="10" stroke-linecap="round" fill="none"></path>
+<!-- deck top surface (parallelogram) -->
+<path d="M8 252 L40 226 L540 226 L508 252 Z" fill="#4a4d55"></path>
+<!-- belt on top surface -->
+<path d="M22 248 L48 229 L520 229 L494 248 Z" fill="#3a3d44"></path>
+<line x1="40" y1="238.5" x2="506" y2="238.5" stroke="rgba(255,255,255,.75)" stroke-width="6" stroke-dasharray="14 22" style="animation:bwtread .45s linear infinite"></line>
+<line x1="40" y1="226" x2="540" y2="226" stroke="#6a6e77" stroke-width="3"></line>
+<!-- deck side face -->
+<path d="M8 252 L508 252 L508 272 Q508 276 504 276 L12 276 Q8 276 8 272 Z" fill="#2f3136"></path>
+<!-- deck end face -->
+<path d="M508 252 L540 226 L540 246 L508 276 Z" fill="#1f2126"></path>
+<!-- rear roller -->
+<ellipse cx="14" cy="264" rx="7" ry="12" fill="#1f2126"></ellipse>
+<circle cx="40" cy="282" r="8" fill="#1f2126"></circle>
+<!-- motor housing: top, front, side -->
+<path d="M470 232 Q470 210 494 208 L566 208 Q586 208 594 222 L566 246 L486 246 Z" fill="#4a4d55"></path>
+<path d="M486 246 L566 246 L566 278 L486 278 Z" fill="#2f3136"></path>
+<path d="M566 246 L594 222 L594 254 L566 278 Z" fill="#1f2126"></path>
+<!-- base plate -->
+<path d="M458 278 L578 278 L600 262 L600 270 L580 288 L458 288 Z" fill="#1f2126"></path>
+<!-- front upright: two faces -->
+<path d="M522 238 L556 92 L568 94 L534 240 Z" fill="#2f3136"></path>
+<path d="M534 240 L568 94 L576 98 L542 236 Z" fill="#1f2126"></path>
+<!-- near handrail -->
+<path d="M558 112 Q548 124 488 124" stroke="#2f3136" stroke-width="12" stroke-linecap="round" fill="none"></path>
+<path d="M556 108 Q546 119 490 119" stroke="#6a6e77" stroke-width="3" stroke-linecap="round" fill="none"></path>
+<!-- console (side profile, facing runner) -->
+<path d="M540 100 L600 92 L604 80 L560 66 Q548 64 544 72 Z" fill="#2f3136"></path>
+<path d="M544 72 Q548 64 560 66 L604 80" stroke="#6a6e77" stroke-width="3" fill="none" stroke-linecap="round"></path>
+<path d="M541 98 L546 74" stroke="#9cc4ec" stroke-width="5" stroke-linecap="round"></path>
+<path d="M540 100 L600 92" stroke="#1f2126" stroke-width="4" stroke-linecap="round"></path>
+</svg></span></h1>
+    <p style="margin:0;max-width:480px;font-size:clamp(17px,2vw,19px);line-height:1.6;color:#5f6268;text-wrap:pretty">A practical guide for women balancing work, family, long commutes and deadlines.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;margin-top:6px">
+      <a href="#buy" style="padding:17px 32px;border-radius:10px;background:#9cc4ec;color:#1f2126;font-size:16px;font-weight:600;box-shadow:0 14px 30px -14px rgba(60,100,150,.35);white-space:nowrap" style-hover="background:#87b5e3;color:#1f2126">Get it for ₦15,000</a>
+      <a href="#buy" style="font-size: 16px; font-weight: 600; color: #2f3136; border-bottom: 1.5px solid #a9c9ea; padding-bottom: 2px; white-space: nowrap; display: none">See what’s inside</a>
+    </div>
+    <span style="font-size:14px;color:#8a8d93"><span style="text-decoration:line-through">₦30,000 / $30</span> · ₦15,000 / $15 · One-time payment</span>
+  </div>
+</header>
+
+<!-- VIDEO -->
+<section data-screen-label="Video" style="max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,40px)">
+  <div style="width:100%;box-sizing:border-box;aspect-ratio:16/8;min-height:220px;border-radius:14px;background:#e9f0f8;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;box-shadow:0 40px 80px -50px rgba(40,70,110,.3)">
+    <span style="width:76px;height:76px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px -10px rgba(40,70,110,.3)"><span style="width:0;height:0;border-left:18px solid #2f3136;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px"></span></span>
+    <span style="font-size:13px;color:#4d7aa6">Video placeholder</span>
+  </div>
+</section>
+
+<!-- WEEK -->
+<section id="week" data-screen-label="Sound familiar" style="max-width:1000px;margin:0 auto;padding:clamp(80px,12vw,140px) clamp(20px,4vw,40px) clamp(56px,8vw,90px);display:flex;flex-wrap:wrap;gap:clamp(28px,6vw,80px)">
+  <div style="flex:1 1 280px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#4d7aa6">Be honest with yourself</span>
+    <h2 style="margin:0;font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-0.03em;font-weight:300;text-wrap:balance">Have you been <span style="font-weight:700;color:#2f3136">here before?</span></h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;color:#5f6268;max-width:340px">Monday, you’re determined. You promise to eat better, drink more water, stop snacking and start exercising. You even buy the groceries. Then real life happens.</p>
+  </div>
+  <div style="flex:1.4 1 340px;min-width:0;display:flex;flex-direction:column">
+    <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid #e8eaec;align-items:baseline"><span style="flex:none;width:84px;font-size:13px;font-weight:600;color:#4d7aa6">Morning</span><span style="font-size:19px;line-height:1.4;">You wake up late and rush to work without breakfast.</span></div>
+    <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid #e8eaec;align-items:baseline"><span style="flex:none;width:84px;font-size:13px;font-weight:600;color:#4d7aa6">Lunch</span><span style="font-size:19px;line-height:1.4;">Whatever you can quickly buy around the office.</span></div>
+    <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid #e8eaec;align-items:baseline"><span style="flex:none;width:84px;font-size:13px;font-weight:600;color:#4d7aa6">3pm</span><span style="font-size:19px;line-height:1.4;">Someone brings cake. “I’ll only have a little.”</span></div>
+    <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1px solid #e8eaec;align-items:baseline"><span style="flex:none;width:84px;font-size:13px;font-weight:600;color:#4d7aa6">Evening</span><span style="font-size:19px;line-height:1.4;">Traffic. Exhausted. You order food and promise to start again tomorrow.</span></div>
+    <div style="display:flex;gap:24px;padding:20px 0;align-items:baseline"><span style="flex:none;width:84px;font-size:13px;font-weight:600;color:#2f3136">Then</span><span style="font-size:19px;line-height:1.4;font-weight:700;color:#2f3136">And somehow, tomorrow becomes next Monday.</span></div>
+  </div>
+</section>
+
+<section data-screen-label="Not discipline" style="max-width:760px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(64px,10vw,110px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+  <p style="margin:0;font-size:clamp(22px,2.8vw,28px);line-height:1.35;letter-spacing:-0.02em;font-weight:300;text-wrap:balance">It’s not always that you lack discipline. <span style="font-weight:700">The advice you’ve been following was never designed for your lifestyle.</span></p>
+  <p style="margin:0;font-size:17px;line-height:1.6;color:#5f6268;max-width:560px">Most plans expect hours to cook, daily gym time and energy for complicated meals. You’re a working woman with responsibilities. You need something that works even when your schedule doesn’t.</p>
+</section>
+
+<!-- WHY -->
+<section data-screen-label="Why it's difficult" style="max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,40px) clamp(64px,10vw,110px)">
+  <div style="border-top:1px solid #e8eaec;padding-top:clamp(48px,7vw,80px);display:flex;flex-direction:column;gap:44px">
+    <h2 style="margin:0;font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-0.03em;font-weight:300;text-wrap:balance">Why the usual approach <span style="font-weight:700;color:#2f3136">keeps becoming difficult</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:36px 56px">
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:700;color:#4d7aa6">01</span><h3 style="margin:0;font-size:19px;font-weight:700;line-height:1.3">Routines that don’t fit your schedule</h3><p style="margin:0;font-size:15px;line-height:1.65;color:#5f6268">A two-hour gym routine sounds good until meetings run late, the children need attention or you get home exhausted.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:700;color:#4d7aa6">02</span><h3 style="margin:0;font-size:19px;font-weight:700;line-height:1.3">Treating your favourite foods like the enemy</h3><p style="margin:0;font-size:15px;line-height:1.65;color:#5f6268">Rice, yam, plantain, potatoes, pasta, swallow. Healthier eating doesn’t mean abandoning your culture or the meals you grew up on.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:700;color:#4d7aa6">03</span><h3 style="margin:0;font-size:19px;font-weight:700;line-height:1.3">Relying on motivation, not a routine</h3><p style="margin:0;font-size:15px;line-height:1.65;color:#5f6268">Motivation won’t always be there after a stressful day. You need small habits you can return to when life gets busy.</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span style="font-size:14px;font-weight:700;color:#4d7aa6">04</span><h3 style="margin:0;font-size:19px;font-weight:700;line-height:1.3">One difficult day feels like failure</h3><p style="margin:0;font-size:15px;line-height:1.65;color:#5f6268">One meal doesn’t erase your progress. The goal is to keep going instead of constantly starting over.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section data-screen-label="What if" style="max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,40px)">
+  <div style="border-radius:14px;background:#23252a;color:#fff;padding:clamp(40px,7vw,80px) clamp(24px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,5vw,64px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#9cc4ec">Imagine this</span>
+      <h2 style="margin:0;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-0.035em;font-weight:300;text-wrap:balance">What if weight loss could fit <span style="font-weight:700;color:#9cc4ec">the life you already have?</span></h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#b9bcc2;max-width:420px">No new diet every Monday. Just better choices with the foods already around you.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #3a3d44">
+      <div style="display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid #3a3d44"><span style="flex:none;font-size:13px;font-weight:700;color:#9cc4ec">01</span><span style="font-size:18px;line-height:1.4;color:#fff">Knowing what to eat</span></div>
+      <div style="display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid #3a3d44"><span style="flex:none;font-size:13px;font-weight:700;color:#9cc4ec">02</span><span style="font-size:18px;line-height:1.4;color:#fff">Knowing how to move</span></div>
+      <div style="display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid #3a3d44"><span style="flex:none;font-size:13px;font-weight:700;color:#9cc4ec">03</span><span style="font-size:18px;line-height:1.4;color:#fff">Handling office temptations</span></div>
+      <div style="display:flex;gap:16px;align-items:baseline;padding:18px 0"><span style="flex:none;font-size:13px;font-weight:700;color:#9cc4ec">04</span><span style="font-size:18px;line-height:1.4;color:#fff">A plan for when your schedule gets overwhelming</span></div>
+    </div>
+    <div style="grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding-top:clamp(28px,4vw,40px);border-top:1px solid #3a3d44">
+      <p style="margin:0;max-width:620px;font-size:18px;line-height:1.55;color:#d7d9dd">That’s why Delipher created <strong style="color:#fff">The Busy Woman’s Weight Loss System</strong>. It isn’t about perfection. It’s about a routine you can actually maintain.</p>
+      <a href="#buy" style="padding:16px 30px;border-radius:10px;background:#9cc4ec;color:#1f2126;font-size:15px;font-weight:600;white-space:nowrap" style-hover="background:#87b5e3;color:#1f2126">Get instant access for ₦15,000</a>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM -->
+<section id="system" data-screen-label="The system" style="max-width:1000px;margin:0 auto;padding:clamp(80px,12vw,140px) clamp(20px,4vw,40px) clamp(64px,10vw,110px);display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#4d7aa6">The system</span>
+    <h2 style="margin:0;text-align:center;font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-0.03em;font-weight:300;text-wrap:balance">Make weight-loss habits <span style="font-weight:700;color:#2f3136">work around your life</span></h2>
+    <p style="margin:0;font-size:17px;color:#5f6268">Inside the guide, you’ll work through nine practical areas.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:36px 44px">
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Understand what’s in the way</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Office snacks, sugary drinks, skipped meals, stress eating and weekend routines.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Change your approach</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Stop treating every meal as a test of discipline. Focus on consistency, not perfection.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Build a routine that fits</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Simple morning, afternoon and evening habits that work around your responsibilities.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">4</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Eat smarter, keep your favourites</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Portions and balanced meals using familiar foods you already enjoy.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">5</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Handle office temptations</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Birthday cakes, meeting snacks, takeaways and days lunch is bought outside.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">6</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Make movement routine</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Walking, home workouts, stairs, dancing and strength exercises. No hours at the gym.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">7</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Understand stress eating</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Notice when you’re reaching for food because you’re overwhelmed, not hungry.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">8</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Track progress calmly</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Look beyond the scale at habits, energy, sleep and other changes.</span></div></div>
+    <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:38px;height:38px;border-radius:8px;background:#e3eefa;color:#2f3136;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center">9</span><div style="display:flex;flex-direction:column;gap:6px;padding-top:7px"><span style="font-size:17px;font-weight:700">Stay consistent when life gets busy</span><span style="font-size:15px;line-height:1.6;color:#5f6268">Return to your routine after travel, celebrations, deadlines and surprises.</span></div></div>
+  </div></section>
+
+<!-- FIT -->
+<section data-screen-label="Who it's for" style="max-width:1000px;margin:0 auto;padding:clamp(80px,12vw,140px) clamp(20px,4vw,40px) clamp(64px,10vw,110px);display:flex;flex-direction:column;gap:40px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,80px)">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h2 style="margin:0;font-size:30px;font-weight:700;letter-spacing:-0.025em;color:#2f3136">This is for you if…</h2>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.5"><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You’re a working woman with a busy schedule</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You’ve tried different diets but struggled to maintain them</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You want healthier habits without giving up familiar meals</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>Long work hours make meal planning hard</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You want simple movement that fits into your day</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You keep starting over every Monday</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#4d7aa6;transform:translateY(-2px)"></span>You want a guide and workbook to stay organised</li></ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h2 style="margin:0;font-size:30px;font-weight:700;letter-spacing:-0.025em;color:#8a8d93">This may not be for you if…</h2>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;font-size:16px;line-height:1.5;color:#6c6f75"><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;border:1.5px solid #c3c6cb;box-sizing:border-box;transform:translateY(-2px)"></span>You’re looking for an overnight transformation</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;border:1.5px solid #c3c6cb;box-sizing:border-box;transform:translateY(-2px)"></span>You expect a guaranteed number of kilograms to disappear</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;border:1.5px solid #c3c6cb;box-sizing:border-box;transform:translateY(-2px)"></span>You’re unwilling to practise or build new habits</li><li style="display:flex;gap:14px;align-items:baseline"><span style="flex:none;width:8px;height:8px;border-radius:50%;border:1.5px solid #c3c6cb;box-sizing:border-box;transform:translateY(-2px)"></span>You want an extreme diet or quick fix</li></ul>
+    </div>
+  </div>
+  <p style="margin:0;padding-top:28px;border-top:1px solid #e8eaec;text-align:center;font-size:17px;font-weight:600">Realistic habits and sustainable progress, not promises of instant results.</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section data-screen-label="Testimonials" style="max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,40px) clamp(64px,10vw,110px);display:flex;flex-direction:column;gap:40px">
+  <h2 style="margin:0;text-align:center;font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-0.03em;font-weight:300">What women <span style="font-weight:700;color:#2f3136">are saying</span></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px">
+    <div style="min-height:200px;border-radius:12px;background:#fff;border:1px solid #ebedef;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px"><span style="font-size:40px;line-height:.5;color:#a9c9ea;font-weight:700">“</span><span style="font-size:15px;color:#8a8d93">Real testimonial goes here</span></div>
+    <div style="min-height:200px;border-radius:12px;background:#fff;border:1px solid #ebedef;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px"><span style="font-size:40px;line-height:.5;color:#a9c9ea;font-weight:700">“</span><span style="font-size:15px;color:#8a8d93">Real testimonial goes here</span></div>
+    <div style="min-height:200px;border-radius:12px;background:#fff;border:1px solid #ebedef;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px"><span style="font-size:40px;line-height:.5;color:#a9c9ea;font-weight:700">“</span><span style="font-size:15px;color:#8a8d93">Real testimonial goes here</span></div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section id="buy" data-screen-label="Offer" style="max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,40px) clamp(64px,10vw,110px)">
+  <div style="border-radius:14px;background:#fff;border:1px solid #e8eaec;box-shadow:0 40px 80px -60px rgba(40,70,110,.35);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));overflow:hidden">
+    <div style="padding:clamp(32px,6vw,64px);display:flex;flex-direction:column;gap:24px">
+      <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#4d7aa6">The complete system</span>
+      <h2 style="margin:0;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-0.03em;font-weight:300">Everything, <span style="font-weight:700">in one package.</span></h2>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#5f6268">Not just a few pages of advice. Instead of buying each resource separately, get the complete package together.</p>
+      <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px 20px;font-size:15px"><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Main ebook</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Companion workbook</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>7-day meal planner</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Grocery checklist</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Weekly habit tracker</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>30-day challenge</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Restaurant cheat sheet</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>90-day action plan</li><li style="display:flex;gap:12px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#e3eefa;color:#23252a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">✓</span>Community access</li></ul>
+    </div>
+    <div style="padding:clamp(32px,6vw,64px);background:#f4f8fc;border-left:1px solid #e8eaec;display:flex;flex-direction:column;justify-content:center;gap:18px">
+      <span style="align-self:flex-start;padding:7px 14px;border-radius:10px;background:#23252a;color:#fff;font-size:13px;font-weight:700">Today’s offer · Save 50%</span>
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font-size:clamp(52px,7vw,72px);font-weight:700;letter-spacing:-0.04em;line-height:1">₦15,000</span><span style="font-size:20px;color:#5f6268">/ $15</span></div>
+      <span style="font-size:15px;color:#8a8d93">Reference price <span style="text-decoration:line-through">₦30,000 / $30</span></span>
+      <a href="#" style="margin-top:6px;display:flex;justify-content:center;padding:18px 32px;border-radius:10px;background:#9cc4ec;color:#1f2126;font-size:16px;font-weight:700" style-hover="background:#87b5e3;color:#1f2126">Get the complete system now</a>
+      <span style="font-size:13px;color:#8a8d93;text-align:center">One payment · Digital product · No monthly subscription</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" data-screen-label="FAQ" style="max-width:760px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(64px,10vw,110px);display:flex;flex-direction:column;gap:32px">
+  <h2 style="margin:0;text-align:center;font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-0.03em;font-weight:300;text-wrap:balance">Frequently asked <span style="font-weight:700;color:#2f3136">questions</span></h2>
+  <div style="display:flex;flex-direction:column;border-top:1px solid #e8eaec">
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Do I have to stop eating the foods I love?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">No. The guide shows how to approach familiar foods and everyday meals. The goal is more balanced habits, not eliminating your culture or favourite foods.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Do I need to go to the gym?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">No. The guide explores walking, home workouts, dancing, stair climbing and strength exercises.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Will this work with a busy work schedule?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">Yes. It was created with working women and their everyday responsibilities in mind, and focuses on habits that fit around a busy schedule.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">What exactly am I buying?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">The main ebook, the companion workbook, the listed planning resources and community access.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Is this a physical book?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">No. It’s a digital product you can open on a compatible phone, tablet or computer.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">How quickly will I lose weight?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">Results vary from person to person. The guide doesn’t promise a specific amount of weight loss or a timeline. It gives you practical education and tools to build healthier habits.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Do I get access to a community?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">Yes. Community access is included. Joining details are provided after purchase.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">Do I have to pay every month?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">No. It’s a one-time payment, with no monthly subscription.</p></details>
+    <details style="border-bottom:1px solid #e8eaec"><summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:18px;font-weight:600">What if I have a medical condition or special dietary needs?<span class="pm" style="color:#4d7aa6;font-size:24px;font-weight:300;transition:transform .2s">+</span></summary><p style="margin:0 0 22px;font-size:16px;color:#5f6268;line-height:1.65">The guide is general education, not individual medical advice. If you have a medical condition, are pregnant or breastfeeding, or have specific health needs, speak with a qualified healthcare professional before making significant changes to your eating or exercise.</p></details>
+  </div>
+</section>
+
+<!-- NOTE -->
+<section data-screen-label="Note" style="max-width:680px;margin:0 auto;padding:clamp(72px,10vw,120px) clamp(20px,4vw,40px) 40px;display:flex;flex-direction:column;gap:20px">
+  <span style="font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#4d7aa6">A note from Delipher Ventino</span>
+  <p style="margin:0;font-size:19px;line-height:1.7">I created this guide for the woman who wants to make a change but doesn’t want another unrealistic plan that becomes impossible to follow after a few days.</p>
+  <p style="margin:0;font-size:19px;line-height:1.7;color:#5f6268">You deserve an approach that recognises your real life, your responsibilities and the fact that progress doesn’t have to be perfect.</p>
+  <p style="margin:0;font-size:21px;line-height:1.5;font-weight:700">Start where you are. Build a routine that works for you. Keep going.</p>
+  <div style="display:flex;flex-direction:column;gap:2px;margin-top:6px"><span style="font-size:16px;font-weight:700">Delipher Ventino</span><span style="font-size:14px;color:#8a8d93">The Busy Woman’s Weight Loss System</span></div>
+</section>
+
+<footer style="max-width:1160px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,4vw,40px) 120px;display:flex;flex-direction:column;gap:48px">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:320px">
+      <span style="display:flex;align-items:center;gap:12px"><span style="display:flex;gap:5px;align-items:flex-end;height:30px;padding-left:5px"><span style="width:11px;height:18px;border-radius:6px;background:#cfe2f5;transform:skewX(-16deg)"></span><span style="width:11px;height:30px;border-radius:6px;background:#4d7aa6;transform:skewX(-16deg)"></span><span style="width:11px;height:30px;border-radius:6px;background:#2f3136;transform:skewX(-16deg)"></span></span><span style="font-size: 18px; font-weight: 700; letter-spacing: -0.02em; display: none">Busy Woman</span></span>
+      <p style="margin:0;font-size:15px;line-height:1.6;color:#5f6268">Realistic weight-loss habits for women with full lives.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,7vw,96px)">
+      <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2c5680">Explore</span><a href="#system" style="font-size:15px;color:#5f6268" style-hover="color:#23252a">The system</a><a href="#buy" style="font-size:15px;color:#5f6268" style-hover="color:#23252a">What’s inside</a><a href="#buy" style="font-size:15px;color:#5f6268" style-hover="color:#23252a">Pricing</a></div>
+      <div style="display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2c5680">Help</span><a href="#faq" style="font-size:15px;color:#5f6268" style-hover="color:#23252a">FAQ</a><a href="#" style="font-size:15px;color:#5f6268" style-hover="color:#23252a">Contact</a></div>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;border-top:1px solid #e8eaec;font-size:13px;color:#8a8d93">
+    <span>© 2026 The Busy Woman’s Weight Loss System · Delipher Ventino</span>
+    <span>General education, not medical advice.</span>
+  </div>
+</footer>
+
+<sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:16px;padding:6px 6px 6px 22px;border-radius:10px;background:#2a2c31;color:#fff;box-shadow:0 14px 34px -12px rgba(20,24,32,.45);max-width:calc(100% - 32px)">
+    <span style="font-size:15px;font-weight:600;white-space:nowrap">₦15,000 <span style="color:#a3a6ab;font-weight:400;text-decoration:line-through">₦30,000</span></span>
+    <a href="#buy" style="padding:11px 20px;border-radius:10px;background:#fff;color:#2f3136;font-size:14px;font-weight:700;white-space:nowrap" style-hover="color:#2f3136">Get access</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;stickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conversion&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, scrolled: false };
+  componentDidMount() {
+    this.onScroll = () => { const s = window.scrollY > 600; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    return {
+      showSticky: (this.props.stickyBar ?? true) && this.state.scrolled,
+      menuVisible: this.state.menu,
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

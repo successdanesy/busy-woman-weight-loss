@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fafaf9;
+  color: #23252a;
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #2f3136;
+  text-decoration: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .faq-plus {
+  transform: rotate(45deg);
+}
+
+@keyframes bwtread {
+  to {
+    stroke-dashoffset: 36;
+  }
+}
+
+.treadmill-belt {
+  animation: bwtread 0.45s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .treadmill-belt {
+    animation: none;
+  }
+}
+
+@media (max-width: 599px) {
+  body {
+    zoom: 0.9;
+  }
+  [data-bw-weight] {
+    font-size: 1.15em !important;
+    letter-spacing: -0.02em !important;
+  }
+  [data-bw-h1] {
+    line-height: 1.14 !important;
+    letter-spacing: -0.015em !important;
+    font-size: 40px !important;
+  }
+}

@@ -48,7 +48,7 @@ export default function Faq() {
         className="m-0 text-center font-light"
         style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
       >
-        Frequently asked <span className="font-bold" style={{ color: '#123a2f' }}>questions</span>
+        Frequently asked <span style={{ color: '#123a2f' }}>questions</span>
       </h2>
 
       <div className="flex flex-col border-t border-border1">

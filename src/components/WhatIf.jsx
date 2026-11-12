@@ -28,7 +28,7 @@ export default function WhatIf() {
             style={{ fontSize: 'clamp(32px,4.6vw,52px)', lineHeight: 1.06, letterSpacing: '-0.035em', textWrap: 'balance' }}
           >
             What if weight loss could fit{' '}
-            <span className="font-bold" style={{ color: '#b6e6a0' }}>the life you already have?</span>
+            <span>the life you already have?</span>
           </h2>
           <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#bcd9c6', maxWidth: 420 }}>
             No new diet every Monday. Just better choices with the foods already around you.

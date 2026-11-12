@@ -31,7 +31,7 @@ export default function Offer() {
             className="m-0 font-light"
             style={{ fontSize: 'clamp(30px,4vw,44px)', lineHeight: 1.1, letterSpacing: '-0.03em' }}
           >
-            Everything, <span className="font-bold">in one package.</span>
+            Everything, in one package.
           </h2>
           <p className="m-0 text-[16px]" style={{ lineHeight: 1.6, color: '#5b6b63' }}>
             Not just a few pages of advice. Instead of buying each resource separately, get the complete package

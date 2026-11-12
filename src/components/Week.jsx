@@ -31,7 +31,7 @@ export default function Week() {
             textWrap: 'balance',
           }}
         >
-          Have you been <span className="font-bold" style={{ color: '#123a2f' }}>here before?</span>
+          Have you been <span style={{ color: '#123a2f' }}>here before?</span>
         </h2>
         <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5b6b63', maxWidth: 340 }}>
           Monday, you&rsquo;re determined. You promise to eat better, drink more water, stop snacking and start

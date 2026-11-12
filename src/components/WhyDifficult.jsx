@@ -32,7 +32,7 @@ export default function WhyDifficult() {
           className="m-0 font-light"
           style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
         >
-          Why the usual approach <span className="font-bold" style={{ color: '#123a2f' }}>keeps becoming difficult</span>
+          Why the usual approach <span style={{ color: '#123a2f' }}>keeps becoming difficult</span>
         </h2>
         <div
           className="grid gap-x-14 gap-y-9"

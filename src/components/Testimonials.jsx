@@ -12,7 +12,7 @@ export default function Testimonials() {
           className="m-0 text-center font-light text-white"
           style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em' }}
         >
-          What women <span className="font-bold" style={{ color: '#b6e6a0' }}>are saying</span>
+          What women <span style={{ color: '#b6e6a0' }}>are saying</span>
         </h2>
 
         {/* TODO: replace with the real quote once confirmed with her, this draft is a placeholder for review */}

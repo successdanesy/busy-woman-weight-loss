@@ -11,6 +11,9 @@ const ITEMS = [
 ]
 
 export default function SystemSection() {
+  return null
+
+  /* eslint-disable no-unreachable
   return (
     <section
       id="system"
@@ -28,7 +31,7 @@ export default function SystemSection() {
           className="m-0 text-center font-light"
           style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
         >
-          Make weight-loss habits <span className="font-bold" style={{ color: '#123a2f' }}>work around your life</span>
+          Make weight-loss habits <span style={{ color: '#123a2f' }}>work around your life</span>
         </h2>
         <p className="m-0 text-[17px]" style={{ color: '#5b6b63' }}>
           Inside the guide, you&rsquo;ll work through nine practical areas.
@@ -62,4 +65,5 @@ export default function SystemSection() {
       </div>
     </section>
   )
+  */
 }

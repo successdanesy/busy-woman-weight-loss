@@ -15,7 +15,7 @@ export default function NotDiscipline() {
       >
         It&rsquo;s not always discipline. <span className="font-bold">The advice you&rsquo;ve been following was never designed for your lifestyle.</span>
       </p>
-      <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5f6268', maxWidth: 560 }}>
+      <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5b6b63', maxWidth: 560 }}>
         Most plans expect hours to cook and daily gym time. You need something that works even when your
         schedule doesn&rsquo;t.
       </p>

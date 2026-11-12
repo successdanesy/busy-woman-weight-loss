@@ -32,7 +32,7 @@ export default function WhyDifficult() {
           className="m-0 font-light"
           style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
         >
-          Why the usual approach <span className="font-bold" style={{ color: '#2f3136' }}>keeps becoming difficult</span>
+          Why the usual approach <span className="font-bold" style={{ color: '#123a2f' }}>keeps becoming difficult</span>
         </h2>
         <div
           className="grid gap-x-14 gap-y-9"
@@ -46,14 +46,14 @@ export default function WhyDifficult() {
             >
               <span
                 className="inline-flex items-center justify-center text-[13px] font-bold rounded-full"
-                style={{ width: 30, height: 30, background: '#e3eefa', color: '#4d7aa6' }}
+                style={{ width: 30, height: 30, background: '#d9f0cf', color: '#2f7a5c' }}
               >
                 {item.n}
               </span>
               <h3 className="m-0 text-[19px] font-bold" style={{ lineHeight: 1.3 }}>
                 {item.title}
               </h3>
-              <p className="m-0 text-[15px]" style={{ lineHeight: 1.65, color: '#5f6268' }}>
+              <p className="m-0 text-[15px]" style={{ lineHeight: 1.65, color: '#5b6b63' }}>
                 {item.body}
               </p>
             </div>

@@ -18,7 +18,7 @@ export default function Header() {
       <div style={{ height: 80 }} />
       <nav
         className="fixed top-0 left-0 right-0 z-20 border-b border-border1"
-        style={{ background: '#fafaf9' }}
+        style={{ background: '#f6f8f6' }}
       >
         <div
           className="max-w-[1160px] mx-auto flex items-center justify-between gap-5"
@@ -47,9 +47,9 @@ export default function Header() {
           <a
             href="https://nestuge.com/busywomanweightloss"
             className="hidden min-[900px]:inline-block whitespace-nowrap text-[14px] font-semibold rounded-full"
-            style={{ padding: '12px 22px', background: '#9cc4ec', color: '#1f2126' }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#9cc4ec')}
+            style={{ padding: '12px 22px', background: '#b6e6a0', color: '#0d2a22' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#a3d889')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#b6e6a0')}
           >
             Get the system
           </a>
@@ -59,10 +59,10 @@ export default function Header() {
             aria-label="Menu"
             onClick={() => setMenuOpen((v) => !v)}
             className="min-[900px]:hidden flex items-center gap-2.5 h-11 rounded-btn text-white text-[14px] font-semibold"
-            style={{ padding: '0 16px 0 14px', background: '#23252a', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+            style={{ padding: '0 16px 0 14px', background: '#13241e', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
           >
             <span className="flex flex-col items-end gap-1">
-              <span className="w-[18px] h-[2px] rounded-[2px]" style={{ background: '#9cc4ec' }} />
+              <span className="w-[18px] h-[2px] rounded-[2px]" style={{ background: '#b6e6a0' }} />
               <span className="w-[12px] h-[2px] rounded-[2px] bg-white" />
               <span className="w-[15px] h-[2px] rounded-[2px] bg-white" />
             </span>
@@ -87,7 +87,7 @@ export default function Header() {
               href="https://nestuge.com/busywomanweightloss"
               onClick={closeMenu}
               className="mt-3 text-center text-[16px] font-semibold rounded-full"
-              style={{ padding: 16, background: '#9cc4ec', color: '#1f2126' }}
+              style={{ padding: 16, background: '#b6e6a0', color: '#0d2a22' }}
             >
               Get the system · ₦15,000
             </a>

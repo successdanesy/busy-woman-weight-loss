@@ -18,7 +18,7 @@ export default function Week() {
       <div className="flex flex-col gap-4" style={{ flex: '1 1 280px' }}>
         <span
           className="text-[13px] font-semibold uppercase"
-          style={{ letterSpacing: '.18em', color: '#4d7aa6' }}
+          style={{ letterSpacing: '.18em', color: '#2f7a5c' }}
         >
           Be honest with yourself
         </span>
@@ -31,9 +31,9 @@ export default function Week() {
             textWrap: 'balance',
           }}
         >
-          Have you been <span className="font-bold" style={{ color: '#2f3136' }}>here before?</span>
+          Have you been <span className="font-bold" style={{ color: '#123a2f' }}>here before?</span>
         </h2>
-        <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5f6268', maxWidth: 340 }}>
+        <p className="m-0 text-[17px]" style={{ lineHeight: 1.6, color: '#5b6b63', maxWidth: 340 }}>
           Monday, you&rsquo;re determined. You promise to eat better, drink more water, stop snacking and start
           exercising. You even buy the groceries. Then real life happens.
         </p>
@@ -49,7 +49,7 @@ export default function Week() {
             className="flex items-baseline gap-6 border-b border-border1"
             style={{ padding: '20px 0' }}
           >
-            <span className="flex-none text-[13px] font-semibold" style={{ width: 84, color: '#4d7aa6' }}>
+            <span className="flex-none text-[13px] font-semibold" style={{ width: 84, color: '#2f7a5c' }}>
               {row.label}
             </span>
             <span className="text-[19px]" style={{ lineHeight: 1.4 }}>
@@ -58,10 +58,10 @@ export default function Week() {
           </div>
         ))}
         <div className="flex items-baseline gap-6" style={{ padding: '20px 0' }}>
-          <span className="flex-none text-[13px] font-semibold" style={{ width: 84, color: '#2f3136' }}>
+          <span className="flex-none text-[13px] font-semibold" style={{ width: 84, color: '#123a2f' }}>
             Then
           </span>
-          <span className="text-[19px] font-bold" style={{ lineHeight: 1.4, color: '#2f3136' }}>
+          <span className="text-[19px] font-bold" style={{ lineHeight: 1.4, color: '#123a2f' }}>
             And somehow, tomorrow becomes next Monday.
           </span>
         </div>

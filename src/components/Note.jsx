@@ -1,13 +1,13 @@
 export default function Note() {
   return (
-    <section style={{ background: '#383b42' }}>
+    <section style={{ background: '#0f3b30' }}>
       <div
         className="max-w-[680px] mx-auto flex flex-col gap-5 text-white"
         style={{ padding: 'clamp(72px,10vw,120px) clamp(20px,4vw,40px)' }}
       >
         <span
           className="text-[13px] font-semibold uppercase"
-          style={{ letterSpacing: '.18em', color: '#9cc4ec' }}
+          style={{ letterSpacing: '.18em', color: '#b6e6a0' }}
         >
           A note from Delipher Ventino
         </span>
@@ -15,7 +15,7 @@ export default function Note() {
           I created this guide for the woman who wants to make a change but doesn&rsquo;t want another unrealistic
           plan that becomes impossible to follow after a few days.
         </p>
-        <p className="m-0 text-[19px]" style={{ lineHeight: 1.7, color: '#b9bcc2' }}>
+        <p className="m-0 text-[19px]" style={{ lineHeight: 1.7, color: '#bcd9c6' }}>
           You deserve an approach that recognises your real life, your responsibilities and the fact that progress
           doesn&rsquo;t have to be perfect.
         </p>
@@ -24,7 +24,7 @@ export default function Note() {
         </p>
         <div className="flex flex-col gap-0.5 mt-1.5">
           <span className="text-[16px] font-bold text-white">Delipher Ventino</span>
-          <span className="text-[14px]" style={{ color: '#a3a6ab' }}>
+          <span className="text-[14px]" style={{ color: '#9fc2ad' }}>
             The Busy Woman&rsquo;s Weight Loss System
           </span>
         </div>

@@ -12,7 +12,7 @@ export default function Hero() {
       >
         <span
           className="text-[13px] font-semibold uppercase"
-          style={{ letterSpacing: '.18em', color: '#2c5680' }}
+          style={{ letterSpacing: '.18em', color: '#134e3f' }}
         >
           The Busy Woman&rsquo;s Weight Loss System
         </span>
@@ -25,7 +25,7 @@ export default function Hero() {
             lineHeight: 1.02,
             letterSpacing: '-0.035em',
             textWrap: 'balance',
-            color: '#23252a',
+            color: '#13241e',
           }}
         >
           Lose{' '}
@@ -42,7 +42,7 @@ export default function Hero() {
             style={{ isolation: 'isolate', padding: '0 .04em .3em', marginRight: '.85em' }}
           >
             gym.
-            <Treadmill />
+            {/* <Treadmill /> */}
           </span>
         </h1>
 
@@ -52,7 +52,7 @@ export default function Hero() {
             maxWidth: 480,
             fontSize: 'clamp(17px,2vw,19px)',
             lineHeight: 1.6,
-            color: '#5f6268',
+            color: '#5b6b63',
             textWrap: 'pretty',
           }}
         >
@@ -65,12 +65,12 @@ export default function Hero() {
             className="whitespace-nowrap text-[16px] font-semibold rounded-full"
             style={{
               padding: '17px 32px',
-              background: '#9cc4ec',
-              color: '#1f2126',
-              boxShadow: '0 14px 30px -14px rgba(60,100,150,.35)',
+              background: '#b6e6a0',
+              color: '#0d2a22',
+              boxShadow: '0 14px 30px -14px rgba(30,110,70,.35)',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#87b5e3')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#9cc4ec')}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#a3d889')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#b6e6a0')}
           >
             Get it for ₦15,000
           </a>
@@ -78,8 +78,8 @@ export default function Hero() {
             href="#buy"
             className="whitespace-nowrap text-[16px] font-semibold"
             style={{
-              color: '#2f3136',
-              borderBottom: '1.5px solid #a9c9ea',
+              color: '#123a2f',
+              borderBottom: '1.5px solid #bfe8ab',
               paddingBottom: 2,
               display: 'none',
             }}
@@ -88,7 +88,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <span className="text-[14px]" style={{ color: '#8a8d93' }}>
+        <span className="text-[14px]" style={{ color: '#8a948c' }}>
           <span style={{ textDecoration: 'line-through' }}>₦30,000 / $30</span> · ₦15,000 / $15 · One-time payment
         </span>
       </div>

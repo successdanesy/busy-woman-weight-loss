@@ -20,19 +20,19 @@ export default function StickyBar({ enabled = true }) {
         transform: 'translateX(-50%)',
         zIndex: 30,
         padding: '6px 6px 6px 22px',
-        background: '#2a2c31',
+        background: '#123d31',
         boxShadow: '0 14px 34px -12px rgba(20,24,32,.45)',
         maxWidth: 'calc(100% - 32px)',
       }}
     >
       <span className="text-[15px] font-semibold whitespace-nowrap">
         ₦15,000{' '}
-        <span style={{ color: '#a3a6ab', fontWeight: 400, textDecoration: 'line-through' }}>₦30,000</span>
+        <span style={{ color: '#9fc2ad', fontWeight: 400, textDecoration: 'line-through' }}>₦30,000</span>
       </span>
       <a
         href="https://nestuge.com/busywomanweightloss"
         className="whitespace-nowrap text-[14px] font-bold rounded-full"
-        style={{ padding: '11px 20px', background: '#fff', color: '#2f3136' }}
+        style={{ padding: '11px 20px', background: '#fff', color: '#123a2f' }}
       >
         Get access
       </a>

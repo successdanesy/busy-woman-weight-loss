@@ -20,7 +20,7 @@ export default function SystemSection() {
       <div className="flex flex-col items-center text-center gap-3.5">
         <span
           className="text-[13px] font-semibold uppercase"
-          style={{ letterSpacing: '.18em', color: '#4d7aa6' }}
+          style={{ letterSpacing: '.18em', color: '#2f7a5c' }}
         >
           The system
         </span>
@@ -28,9 +28,9 @@ export default function SystemSection() {
           className="m-0 text-center font-light"
           style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
         >
-          Make weight-loss habits <span className="font-bold" style={{ color: '#2f3136' }}>work around your life</span>
+          Make weight-loss habits <span className="font-bold" style={{ color: '#123a2f' }}>work around your life</span>
         </h2>
-        <p className="m-0 text-[17px]" style={{ color: '#5f6268' }}>
+        <p className="m-0 text-[17px]" style={{ color: '#5b6b63' }}>
           Inside the guide, you&rsquo;ll work through nine practical areas.
         </p>
       </div>
@@ -43,17 +43,17 @@ export default function SystemSection() {
           <div
             key={item.title}
             className="flex gap-4 items-start rounded-card"
-            style={{ padding: 20, background: '#f4f8fc' }}
+            style={{ padding: 20, background: '#eef7ea' }}
           >
             <span
               className="flex-none w-[38px] h-[38px] rounded-full flex items-center justify-center text-[14px] font-bold"
-              style={{ background: '#9cc4ec', color: '#1f2126' }}
+              style={{ background: '#b6e6a0', color: '#0d2a22' }}
             >
               {i + 1}
             </span>
             <div className="flex flex-col gap-1.5" style={{ paddingTop: 7 }}>
               <span className="text-[17px] font-bold">{item.title}</span>
-              <span className="text-[15px]" style={{ lineHeight: 1.6, color: '#5f6268' }}>
+              <span className="text-[15px]" style={{ lineHeight: 1.6, color: '#5b6b63' }}>
                 {item.body}
               </span>
             </div>

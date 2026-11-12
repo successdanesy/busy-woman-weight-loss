@@ -48,7 +48,7 @@ export default function Faq() {
         className="m-0 text-center font-light"
         style={{ fontSize: 'clamp(32px,4.4vw,48px)', lineHeight: 1.08, letterSpacing: '-0.03em', textWrap: 'balance' }}
       >
-        Frequently asked <span className="font-bold" style={{ color: '#2f3136' }}>questions</span>
+        Frequently asked <span className="font-bold" style={{ color: '#123a2f' }}>questions</span>
       </h2>
 
       <div className="flex flex-col border-t border-border1">
@@ -61,12 +61,12 @@ export default function Faq() {
               {item.q}
               <span
                 className="faq-plus text-[24px] font-light"
-                style={{ color: '#4d7aa6', transition: 'transform .2s' }}
+                style={{ color: '#2f7a5c', transition: 'transform .2s' }}
               >
                 +
               </span>
             </summary>
-            <p className="text-[16px]" style={{ margin: '0 0 22px', color: '#5f6268', lineHeight: 1.65 }}>
+            <p className="text-[16px]" style={{ margin: '0 0 22px', color: '#5b6b63', lineHeight: 1.65 }}>
               {item.a}
             </p>
           </details>

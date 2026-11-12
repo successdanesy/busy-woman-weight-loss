@@ -26,7 +26,7 @@ export default function WhoItsFor() {
         style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,340px),1fr))', gap: 'clamp(40px,6vw,80px)' }}
       >
         <div className="flex flex-col gap-[22px]">
-          <h2 className="m-0 text-[30px] font-bold" style={{ letterSpacing: '-0.025em', color: '#2f3136' }}>
+          <h2 className="m-0 text-[30px] font-bold" style={{ letterSpacing: '-0.025em', color: '#123a2f' }}>
             This is for you if&hellip;
           </h2>
           <ul className="m-0 p-0 list-none flex flex-col gap-3.5 text-[16px]" style={{ lineHeight: 1.5 }}>
@@ -34,7 +34,7 @@ export default function WhoItsFor() {
               <li key={item} className="flex gap-3.5 items-baseline">
                 <span
                   className="flex-none w-2 h-2 rounded-full"
-                  style={{ background: '#4d7aa6', transform: 'translateY(-2px)' }}
+                  style={{ background: '#2f7a5c', transform: 'translateY(-2px)' }}
                 />
                 {item}
               </li>
@@ -43,18 +43,18 @@ export default function WhoItsFor() {
         </div>
 
         <div className="flex flex-col gap-[22px]">
-          <h2 className="m-0 text-[30px] font-bold" style={{ letterSpacing: '-0.025em', color: '#8a8d93' }}>
+          <h2 className="m-0 text-[30px] font-bold" style={{ letterSpacing: '-0.025em', color: '#8a948c' }}>
             This may not be for you if&hellip;
           </h2>
           <ul
             className="m-0 p-0 list-none flex flex-col gap-3.5 text-[16px]"
-            style={{ lineHeight: 1.5, color: '#6c6f75' }}
+            style={{ lineHeight: 1.5, color: '#6f7a72' }}
           >
             {NOT_FOR.map((item) => (
               <li key={item} className="flex gap-3.5 items-baseline">
                 <span
                   className="flex-none w-2 h-2 rounded-full box-border"
-                  style={{ border: '1.5px solid #c3c6cb', transform: 'translateY(-2px)' }}
+                  style={{ border: '1.5px solid #c7cdc8', transform: 'translateY(-2px)' }}
                 />
                 {item}
               </li>

@@ -9,14 +9,14 @@ html {
 
 body {
   margin: 0;
-  background: #fafaf9;
-  color: #23252a;
+  background: #f6f8f6;
+  color: #13241e;
   font-family: 'Nunito', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #2f3136;
+  color: #123a2f;
   text-decoration: none;
 }
 

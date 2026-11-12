@@ -17,12 +17,11 @@ export default function Testimonials() {
 
         {/* TODO: replace with the real quote once confirmed with her, this draft is a placeholder for review */}
         <div
-          className="mx-auto rounded-card overflow-hidden grid"
+          className="mx-auto rounded-card overflow-hidden grid grid-cols-1 sm:grid-cols-2"
           style={{
             maxWidth: 720,
             width: '100%',
             background: '#1f5446',
-            gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))',
           }}
         >
           <picture>
@@ -34,7 +33,7 @@ export default function Testimonials() {
               height={900}
               loading="lazy"
               decoding="async"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              style={{ width: '100%', height: '100%', aspectRatio: '1', objectFit: 'cover', display: 'block' }}
             />
           </picture>
           <div className="flex flex-col justify-between gap-6" style={{ padding: 28 }}>

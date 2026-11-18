@@ -13,6 +13,7 @@ export default function Video() {
       >
         <video
           src="/testimonial-video.mp4"
+          poster="/testimonial-video-poster.jpg"
           controls
           playsInline
           preload="metadata"
